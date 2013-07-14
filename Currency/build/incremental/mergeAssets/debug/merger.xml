@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="CurrencyActionBarPullToRefreshUnspecified.aar" >
+        <source path="/home/arman/android-studio-projects/Currency/Currency/build/exploded-bundles/CurrencyActionBarPullToRefreshUnspecified.aar/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/home/arman/android-studio-projects/Currency/Currency/src/main/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/home/arman/android-studio-projects/Currency/Currency/src/debug/assets" />
+    </dataSet>
+
+</merger>
