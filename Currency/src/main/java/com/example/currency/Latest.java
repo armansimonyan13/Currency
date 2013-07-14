@@ -2,7 +2,6 @@ package com.example.currency;
 
 import android.util.Pair;
 
-import javax.sql.RowSetReader;
 import java.util.List;
 
 public class Latest {

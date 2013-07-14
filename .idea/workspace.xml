@@ -7,480 +7,32 @@
   </component>
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <target>android-17</target>
+      </config>
     </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/Currency/src/main/res/layout/activity_converter.xml">
+        <config>
+          <device>Nexus 4</device>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+    </layouts>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="toCou" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34139c82-1476-473c-88b4-ff53a31277c3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/libs/android-support-v4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/libs/android-support-v4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_aed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_aed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_afn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_afn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_all.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_all.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_amd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_amd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_ang.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_ang.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_aoa.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_aoa.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_ars.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_ars.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_aud.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_aud.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_awg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_awg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_azn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_azn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_bam.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_bam.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_bbd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_bbd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_bdt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_bdt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_bgn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_bgn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_bhd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_bhd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_bif.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_bif.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_bmd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_bmd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_bnd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_bnd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_bob.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_bob.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_brl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_brl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_bsd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_bsd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_btn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_btn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_bwp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_bwp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_byr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_byr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_bzd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_bzd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_cad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_cad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_cdf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_cdf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_chf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_chf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_clf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_clf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_clp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_clp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_cny.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_cny.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_cop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_cop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_crc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_crc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_cup.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_cup.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_cve.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_cve.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_czk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_czk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_djf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_djf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_dkk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_dkk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_dop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_dop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_dzd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_dzd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_eek.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_eek.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_egp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_egp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_etb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_etb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_fjd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_fjd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_fkp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_fkp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_gbp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_gbp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_gel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_gel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_ghs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_ghs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_gip.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_gip.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_gmd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_gmd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_gnf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_gnf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_gtq.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_gtq.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_gyd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_gyd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_hkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_hkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_hnl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_hnl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_hrk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_hrk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_htg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_htg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_huf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_huf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_idr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_idr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_ils.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_ils.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_inr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_inr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_iqd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_iqd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_irr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_irr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_isk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_isk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_jep.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_jep.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_jmd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_jmd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_jod.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_jod.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_jpy.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_jpy.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_kes.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_kes.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_kgs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_kgs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_khr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_khr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_kmf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_kmf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_kpw.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_kpw.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_krw.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_krw.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_kwd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_kwd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_kyd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_kyd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_kzt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_kzt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_lak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_lak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_lbp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_lbp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_lkr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_lkr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_lrd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_lrd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_lsl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_lsl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_ltl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_ltl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_lvl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_lvl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_lyd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_lyd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_mad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_mad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_mdl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_mdl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_mga.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_mga.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_mkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_mkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_mmk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_mmk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_mnt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_mnt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_mop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_mop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_mro.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_mro.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_mtl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_mtl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_mur.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_mur.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_mvr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_mvr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_mwk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_mwk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_mxn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_mxn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_myr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_myr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_mzn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_mzn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_nad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_nad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_ngn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_ngn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_nio.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_nio.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_nok.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_nok.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_not_available.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_not_available.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_npr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_npr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_nzd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_nzd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_omr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_omr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_pab.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_pab.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_pen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_pen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_pgk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_pgk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_php.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_php.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_pkr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_pkr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_pln.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_pln.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_pyg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_pyg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_qar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_qar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_ron.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_ron.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_rsd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_rsd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_rub.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_rub.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_rwf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_rwf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_sar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_sar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_sbd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_sbd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_scr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_scr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_sdg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_sdg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_sek.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_sek.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_sgd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_sgd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_shp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_shp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_sll.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_sll.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_sos.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_sos.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_srd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_srd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_std.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_std.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_svc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_svc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_syp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_syp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_szl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_szl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_thb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_thb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_tjs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_tjs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_tmt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_tmt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_tnd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_tnd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_try.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_try.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_ttd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_ttd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_twd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_twd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_tzs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_tzs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_uah.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_uah.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_ugx.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_ugx.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_usd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_usd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_uyu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_uyu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_uzs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_uzs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_vef.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_vef.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_vnd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_vnd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_vuv.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_vuv.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_wst.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_wst.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_yer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_yer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_zar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_zar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_zmk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_zmk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_zmw.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_zmw.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/flag_zwl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/flag_zwl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/ic_launcher-web.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-hdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-mdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xxhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-hdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-mdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/drawable-xxhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-hdpi/ptr_progress_primary_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-xhdpi/ptr_progress_primary_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-hdpi/ptr_progress_primary_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/ptr_progress_primary_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-hdpi/ptr_progressbar_indeterminate_holo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-xhdpi/ptr_progressbar_indeterminate_holo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-hdpi/ptr_progressbar_indeterminate_holo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/ptr_progressbar_indeterminate_holo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-hdpi/ptr_progressbar_indeterminate_holo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-xhdpi/ptr_progressbar_indeterminate_holo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-hdpi/ptr_progressbar_indeterminate_holo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/ptr_progressbar_indeterminate_holo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-hdpi/ptr_progressbar_indeterminate_holo3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-xhdpi/ptr_progressbar_indeterminate_holo3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-hdpi/ptr_progressbar_indeterminate_holo3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/ptr_progressbar_indeterminate_holo3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-hdpi/ptr_progressbar_indeterminate_holo4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-xhdpi/ptr_progressbar_indeterminate_holo4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-hdpi/ptr_progressbar_indeterminate_holo4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/ptr_progressbar_indeterminate_holo4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-hdpi/ptr_progressbar_indeterminate_holo5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-xhdpi/ptr_progressbar_indeterminate_holo5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-hdpi/ptr_progressbar_indeterminate_holo5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/ptr_progressbar_indeterminate_holo5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-hdpi/ptr_progressbar_indeterminate_holo6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-xhdpi/ptr_progressbar_indeterminate_holo6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-hdpi/ptr_progressbar_indeterminate_holo6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/ptr_progressbar_indeterminate_holo6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-hdpi/ptr_progressbar_indeterminate_holo7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-xhdpi/ptr_progressbar_indeterminate_holo7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-hdpi/ptr_progressbar_indeterminate_holo7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/ptr_progressbar_indeterminate_holo7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-hdpi/ptr_progressbar_indeterminate_holo8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable-xhdpi/ptr_progressbar_indeterminate_holo8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-hdpi/ptr_progressbar_indeterminate_holo8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable-xhdpi/ptr_progressbar_indeterminate_holo8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/java/uk/co/senab/actionbarpulltorefresh/library/viewdelegates/AbsListViewDelegate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/ActionBarPullToRefresh.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/build/source/buildConfig/debug/uk/co/senab/actionbarpulltorefresh/library/BuildConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/build/source/buildConfig/release/uk/co/senab/actionbarpulltorefresh/library/BuildConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/source/buildConfig/debug/com/example/currency/BuildConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/Currency-Currency.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/java/uk/co/senab/actionbarpulltorefresh/library/InstanceCreationUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatesRatesItem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/Latest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestReader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/MainActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/java/uk/co/senab/actionbarpulltorefresh/library/PullToRefreshAttacher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/build/source/r/debug/uk/co/senab/actionbarpulltorefresh/library/R.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/build/source/r/release/uk/co/senab/actionbarpulltorefresh/library/R.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/source/r/debug/com/example/currency/R.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/source/r/debug/uk/co/senab/actionbarpulltorefresh/library/R.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/java/uk/co/senab/actionbarpulltorefresh/library/viewdelegates/ScrollViewDelegate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/java/uk/co/senab/actionbarpulltorefresh/library/viewdelegates/WebViewDelegate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/layout/activity_main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/layout/activity_main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/values/currencies.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/layout/default_header.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/layout/default_header.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/values/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/values-sw600dp/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/values-sw720dp-land/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/anim/fade_in.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/anim/fade_in.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/anim/fade_out.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/anim/fade_out.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradlew.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradlew" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values/ids.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/menu/main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/menu/main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable/ptr_progress_horizontal_holo_center.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable/ptr_progress_horizontal_holo_center.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/drawable/ptr_progress_indeterminate_horizontal_holo.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/drawable/ptr_progress_indeterminate_horizontal_holo.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-ar/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-cs/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-de/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-es/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-fi/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-fr/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-he/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-it/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-iw/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-ja/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-ko/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-nl/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-pl/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-pt/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-pt-rBR/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-ro/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-ru/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values-zh/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/values/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/values/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/values/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/values-v11/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/values-v14/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_13_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-ar/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-cs/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-de/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-es/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-fi/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-fr/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-he/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-it/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-iw/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-ja/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-ko/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-nl/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-pl/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-pt/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-pt-rBR/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-ro/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-ru/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-sw720dp-land/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-v11/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-v14/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/values-zh/values.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/build/res/all/debug/layout/view_item_rate.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/layout/view_item_rate.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/Constants.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/ConverterActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/res/layout/activity_converter.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/MainActivity.java" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestRatesListActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Currency/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/Currency/src/main/res/layout/activity_latest_rates_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Currency/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Currency/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/Latest.java" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/Latest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Currency.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -604,20 +156,27 @@
         <option value="$PROJECT_DIR$/Currency/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestAdapter.java" />
         <option value="$PROJECT_DIR$/Currency/src/main/res/layout/view_item_rate.xml" />
-        <option value="$PROJECT_DIR$/Currency/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/../library/build.gradle" />
         <option value="$PROJECT_DIR$/ActionBarPullToRefresh/src/main/java/library/PullToRefreshAttacher.java" />
-        <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/MainActivity.java" />
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/Currency/build.gradle" />
+        <option value="$PROJECT_DIR$/Currency/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/Currency/src/main/res/layout/activity_converter.xml" />
+        <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/Constants.java" />
+        <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestRatesAsyncTask.java" />
+        <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/Latest.java" />
+        <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/ConverterActivity.java" />
+        <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/MainActivity.java" />
+        <option value="$PROJECT_DIR$/Currency/build/res/all/debug/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestRatesListActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="50" />
-    <option name="y" value="69" />
-    <option name="width" value="1336" />
-    <option name="height" value="698" />
+    <option name="x" value="49" />
+    <option name="y" value="24" />
+    <option name="width" value="1317" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -645,6 +204,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -653,10 +213,141 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="currency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -672,11 +363,11 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -794,8 +485,8 @@
       <option name="ACTIVITY_CLASS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
-      <option name="PREFERRED_AVD" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="Android_4.2.2" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
       <option name="WIPE_USER_DATA" value="false" />
@@ -852,33 +543,33 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="50" y="69" width="1336" height="698" extended-state="0" />
+    <frame x="49" y="24" width="1317" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.7746967" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37720707" sideWeight="0.4996066" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939324" sideWeight="0.62279296" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.7746967" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8956661" sideWeight="0.5003934" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5216693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.56661314" sideWeight="0.4996066" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8956661" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46548957" sideWeight="0.4996066" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24573644" sideWeight="0.22530329" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.594958" sideWeight="0.4996066" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24547601" sideWeight="0.62279296" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3563403" sideWeight="0.4996066" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939324" sideWeight="0.5537721" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -943,73 +634,14 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gradlew">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.230769" vertical-offset="1134" max-vertical-offset="3060" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="72" selection-start="1776" selection-end="1776" vertical-scroll-proportion="0.65346533" vertical-offset="810" max-vertical-offset="1206" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../library/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="215" selection-end="215" vertical-scroll-proportion="0.42424244" vertical-offset="0" max-vertical-offset="594" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../library/src/uk/co/senab/actionbarpulltorefresh/library/InstanceCreationUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="6" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.18181819" vertical-offset="0" max-vertical-offset="1260" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Currency/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="56" selection-start="676" selection-end="676" vertical-scroll-proportion="0.52693605" vertical-offset="47" max-vertical-offset="666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ActionBarPullToRefresh/src/main/res/anim/fade_in.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ActionBarPullToRefresh/src/main/java/uk/co/senab/actionbarpulltorefresh/library/viewdelegates/WebViewDelegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ActionBarPullToRefresh/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="382">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ActionBarPullToRefresh/ActionBarPullToRefresh.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.5882353" vertical-offset="486" max-vertical-offset="1440" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Currency/build/source/buildConfig/debug/com/example/currency/BuildConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="19" selection-start="101" selection-end="101" vertical-scroll-proportion="0.18367347" vertical-offset="0" max-vertical-offset="294" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ActionBarPullToRefresh/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="49" selection-start="255" selection-end="255" vertical-scroll-proportion="0.48128343" vertical-offset="54" max-vertical-offset="1764" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
@@ -1025,6 +657,90 @@
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="44" selection-start="1882" selection-end="1882" vertical-scroll-proportion="-13.98913" vertical-offset="5922" max-vertical-offset="11790">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Currency/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="26" selection-start="705" selection-end="705" vertical-scroll-proportion="0.48214287" vertical-offset="270" max-vertical-offset="720">
+          <folding>
+            <element signature="e#480#498#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Currency/src/main/res/layout/view_item_rate.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.8542714" vertical-offset="568" max-vertical-offset="972">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Currency/src/main/res/layout/activity_converter.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="35" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.6226415" vertical-offset="774" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestRatesListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="8" selection-start="1774" selection-end="1774" vertical-scroll-proportion="0.6763006" vertical-offset="828" max-vertical-offset="1890">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="473" selection-end="473" vertical-scroll-proportion="0.45125347" vertical-offset="0" max-vertical-offset="359">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/ConverterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="52" selection-start="443" selection-end="443" vertical-scroll-proportion="0.75208914" vertical-offset="0" max-vertical-offset="486">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatesRatesItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="78" selection-end="78" vertical-scroll-proportion="0.2005571" vertical-offset="0" max-vertical-offset="702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="0.10027855" vertical-offset="0" max-vertical-offset="1152">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/Latest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="58" selection-end="58" vertical-scroll-proportion="0.050139274" vertical-offset="54" max-vertical-offset="1062">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
