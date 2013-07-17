@@ -31,6 +31,9 @@
 		    android:name=".ConverterActivity" />
 
 	    <activity
+		    android:name=".AvailableCurrenciesActivity" />
+
+	    <activity
 		    android:name=".AboutActivity" />
     </application>
 

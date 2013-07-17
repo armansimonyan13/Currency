@@ -48,9 +48,14 @@ public class LatestRatesListActivity extends ListActivity implements PullToRefre
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		Intent intent = null;
 		switch (item.getItemId()) {
+			case R.id.action_settings:
+				intent = new Intent(LatestRatesListActivity.this, AvailableCurrenciesActivity.class);
+				startActivity(intent);
+				return true;
 			case R.id.action_about:
-				Intent intent = new Intent(LatestRatesListActivity.this, AboutActivity.class);
+				intent = new Intent(LatestRatesListActivity.this, AboutActivity.class);
 				startActivity(intent);
 				return true;
 		}
