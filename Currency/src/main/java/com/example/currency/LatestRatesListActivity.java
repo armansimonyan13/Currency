@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import uk.co.senab.actionbarpulltorefresh.library.PullToRefreshAttacher;
@@ -45,6 +47,17 @@ public class LatestRatesListActivity extends ListActivity implements PullToRefre
     }
 
 	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.action_about:
+				Intent intent = new Intent(LatestRatesListActivity.this, AboutActivity.class);
+				startActivity(intent);
+				return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
 	public void onRefreshStarted(View view) {
 		updateRates();
 	}
@@ -54,9 +67,14 @@ public class LatestRatesListActivity extends ListActivity implements PullToRefre
 		super.onListItemClick(l, v, position, id);
 
 		Intent converterActivityIntent = new Intent(this, ConverterActivity.class);
-		TextView valueTextView = (TextView) v.findViewById(R.id.value);
-		converterActivityIntent.putExtra(ConverterActivity.TO_VALUE, Double.parseDouble(valueTextView.getText().toString()));
 
+		TextView valueTextView = (TextView) v.findViewById(R.id.value);
+		converterActivityIntent.putExtra(ConverterActivity.TO_VALUE,
+				Double.parseDouble(valueTextView.getText().toString()));
+
+		ImageView toFlagImageView = (ImageView) v.findViewById(R.id.flag);
+		String currencyName = (String) toFlagImageView.getTag();
+		converterActivityIntent.putExtra(ConverterActivity.TO_FLAG, currencyName);
 
 		startActivity(converterActivityIntent);
 	}

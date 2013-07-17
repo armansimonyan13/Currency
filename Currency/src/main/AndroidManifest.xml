@@ -29,6 +29,9 @@
 
 	    <activity
 		    android:name=".ConverterActivity" />
+
+	    <activity
+		    android:name=".AboutActivity" />
     </application>
 
 </manifest>

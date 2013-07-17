@@ -52,7 +52,9 @@ public class LatestAdapter extends BaseAdapter {
 		((TextView) view.findViewById(R.id.value)).setText(pair.second.toString());
 
 		ImageView flagImage = (ImageView) view.findViewById(R.id.flag);
+
 		String flagName = pair.first.toLowerCase();
+		flagImage.setTag(flagName);
 		int imageId = context.getResources().getIdentifier("flag_" + flagName, "drawable", context.getPackageName());
 
 		if (imageId == 0) {

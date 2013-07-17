@@ -17,13 +17,13 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_centerHorizontal="true"
-				android:src="@drawable/flag_amd" />
+				android:src="@drawable/flag_usd" />
 
 		<EditText
-				android:id="@+id/from_count"
+				android:id="@+id/from_value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:inputType="number"
+				android:inputType="numberDecimal"
 				android:gravity="right"
 				android:layout_below="@id/from_flag"
 				android:layout_alignParentLeft="true"
@@ -52,14 +52,31 @@
 				android:src="@drawable/flag_amd" />
 
 		<EditText
-				android:id="@+id/to_count"
+				android:id="@+id/to_value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:inputType="number"
+				android:inputType="numberDecimal"
 				android:gravity="right"
 				android:layout_below="@id/to_flag"
 				android:layout_alignParentLeft="true"
 				android:layout_alignParentRight="true"
 				android:text="0000.0000" />
 	</RelativeLayout>
+
+	<TextView
+		android:id="@+id/text_view"
+		android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+		android:layout_above="@+id/date_picker"
+		android:layout_centerHorizontal="true"
+		android:textSize="35sp"
+		android:text="0.0000" />
+
+	<DatePicker
+		android:id="@id/date_picker"
+		android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:calendarViewShown="false"
+	    android:layout_centerHorizontal="true"
+	    android:layout_alignParentBottom="true" />
 </RelativeLayout>
