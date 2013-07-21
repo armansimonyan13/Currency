@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="initial_currencies">
+		<item>amd</item>
+		<item>usd</item>
+		<item>rub</item>
+		<item>eur</item>
+	</string-array>
+</resources>

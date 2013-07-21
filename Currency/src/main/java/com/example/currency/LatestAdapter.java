@@ -1,7 +1,5 @@
 package com.example.currency;
 
-import android.content.Context;
-import android.util.Log;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,14 +9,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class LatestAdapter extends BaseAdapter {
-	private Context context;
+	private LatestRatesListActivity activity;
 	private Latest latest;
 	private LayoutInflater inflater;
 
-	public LatestAdapter(Context context, Latest latest) {
-		this.context = context;
+	public LatestAdapter(LatestRatesListActivity activity, Latest latest) {
+		this.activity = activity;
 		this.latest = latest;
-		this.inflater = LayoutInflater.from(context);
+		this.inflater = LayoutInflater.from(activity);
 	}
 
 	@Override
@@ -55,7 +53,7 @@ public class LatestAdapter extends BaseAdapter {
 
 		String flagName = pair.first.toLowerCase();
 		flagImage.setTag(flagName);
-		int imageId = context.getResources().getIdentifier("flag_" + flagName, "drawable", context.getPackageName());
+		int imageId = activity.getResources().getIdentifier("flag_" + flagName, "drawable", activity.getPackageName());
 
 		if (imageId == 0) {
 			flagImage.setImageResource(R.drawable.flag_not_available);
@@ -63,8 +61,8 @@ public class LatestAdapter extends BaseAdapter {
 			flagImage.setImageResource(imageId);
 		}
 
-		int stringId = context.getResources().getIdentifier("currency_" + flagName, "string", context.getPackageName());
-		((TextView) view.findViewById(R.id.description)).setText(" - " + context.getResources().getString(stringId));
+		int stringId = activity.getResources().getIdentifier("currency_" + flagName, "string", activity.getPackageName());
+		((TextView) view.findViewById(R.id.description)).setText(" - " + activity.getResources().getString(stringId));
 
 		return view;
 	}

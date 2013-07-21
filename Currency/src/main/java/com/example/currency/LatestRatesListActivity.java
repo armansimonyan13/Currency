@@ -2,8 +2,10 @@ package com.example.currency;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,9 +17,14 @@ import uk.co.senab.actionbarpulltorefresh.library.PullToRefreshAttacher;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
 
 public class LatestRatesListActivity extends ListActivity implements PullToRefreshAttacher.OnRefreshListener {
-	private Latest latest;
+	private static final String TAG = LatestRatesListActivity.class.getName();
+
 	private PullToRefreshAttacher pullToRefreshAttacher;
 
     @Override
@@ -52,7 +59,7 @@ public class LatestRatesListActivity extends ListActivity implements PullToRefre
 		switch (item.getItemId()) {
 			case R.id.action_settings:
 				intent = new Intent(LatestRatesListActivity.this, AvailableCurrenciesActivity.class);
-				startActivity(intent);
+				startActivityForResult(intent, 13);
 				return true;
 			case R.id.action_about:
 				intent = new Intent(LatestRatesListActivity.this, AboutActivity.class);
@@ -97,6 +104,20 @@ public class LatestRatesListActivity extends ListActivity implements PullToRefre
 					urlConnection = (HttpURLConnection) url.openConnection();
 					LatestReader latestReader = new LatestReader(urlConnection.getInputStream());
 					latest = latestReader.read();
+
+					List<Pair<String, Double>> allRates = latest.getRates();
+					List<Pair<String, Double>> filteredRates = new ArrayList<Pair<String, Double>>();
+
+					for (String currency : getPreferedCurrencies()) {
+						for (Pair<String, Double> rate : allRates) {
+							if (currency.equals(rate.first.toLowerCase())) {
+								filteredRates.add(rate);
+								break;
+							}
+						}
+					}
+
+					latest.setRates(filteredRates);
 				} catch (Exception e) {
 					e.printStackTrace();
 				} finally {
@@ -118,5 +139,27 @@ public class LatestRatesListActivity extends ListActivity implements PullToRefre
 				pullToRefreshAttacher.setRefreshComplete();
 			}
 		}.execute();
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (resultCode == RESULT_OK) {
+			if (requestCode == 13) {
+				updateRates();
+			}
+		}
+		super.onActivityResult(requestCode, resultCode, data);
+	}
+
+	public ArrayList<String> getPreferedCurrencies() {
+		SharedPreferences sharedPreferences = getSharedPreferences("application_settings", MODE_PRIVATE);
+		Set<String> preferredCurrencies = sharedPreferences.getStringSet("preferred_currencies", null);
+
+		if (preferredCurrencies == null) {
+			return new ArrayList<String>(
+					Arrays.asList(getResources().getStringArray(R.array.initial_currencies)));
+		} else {
+			return new ArrayList<String>(preferredCurrencies);
+		}
 	}
 }
