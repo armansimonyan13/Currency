@@ -1,28 +1,24 @@
 package com.example.currency;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-
 public class AvailableCurrenciesAdapter extends BaseAdapter {
 	private static final String TAG = AvailableCurrenciesAdapter.class.getName();
 
 	private Context context;
-	private String[] availableCurrencies;
+	private CurrenciesDAO currenciesDAO;
 	private LayoutInflater inflater;
-	private ArrayList<String> selecteds;
+	private String[] availableCurrencies;
 
-	public AvailableCurrenciesAdapter(Context context) {
+	public AvailableCurrenciesAdapter(Context context, CurrenciesDAO currenciesDAO) {
 		this.context = context;
-		availableCurrencies = context.getResources().getStringArray(R.array.available_currencies);
+		this.currenciesDAO = currenciesDAO;
 		inflater = LayoutInflater.from(context);
-		selecteds = new ArrayList<String>();
+		availableCurrencies = context.getResources().getStringArray(R.array.available_currencies);
 	}
 
 	@Override
@@ -55,25 +51,18 @@ public class AvailableCurrenciesAdapter extends BaseAdapter {
 		((TextView) view.findViewById(R.id.name)).setText(currency.toUpperCase());
 		final CheckBox checkBox = (CheckBox) view.findViewById(R.id.selection);
 		checkBox.setTag(currency);
+		if (currenciesDAO.getCurrency(currency.toUpperCase()).getName() != null) {
+			checkBox.setChecked(true);
+		} else {
+			checkBox.setChecked(false);
+		}
 		checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 			@Override
 			public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-				Log.d(TAG, "Clicked");
 				if (isChecked) {
-					for (String s : selecteds) {
-						if (s.equals(checkBox.getTag())) {
-							return;
-						}
-					}
-
-					selecteds.add((String) checkBox.getTag());
+					currenciesDAO.createCurrency(((String) checkBox.getTag()).toUpperCase(), 0.0);
 				} else {
-					Iterator<String> iterator = selecteds.listIterator();
-					while (iterator.hasNext()) {
-						if (iterator.next().equals(checkBox.getTag())) {
-							iterator.remove();
-						}
-					}
+					currenciesDAO.deleteCurrency(((String) checkBox.getTag()).toUpperCase());
 				}
 			}
 		});
@@ -93,9 +82,5 @@ public class AvailableCurrenciesAdapter extends BaseAdapter {
 		((TextView) view.findViewById(R.id.description)).setText(" - " + context.getResources().getString(stringId));
 
 		return view;
-	}
-
-	public ArrayList<String> getSelecteds() {
-		return selecteds;
 	}
 }

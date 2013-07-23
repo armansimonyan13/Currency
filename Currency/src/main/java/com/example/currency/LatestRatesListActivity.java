@@ -2,7 +2,7 @@ package com.example.currency;
 
 import android.app.ListActivity;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteException;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Pair;
@@ -18,14 +18,13 @@ import uk.co.senab.actionbarpulltorefresh.library.PullToRefreshAttacher;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 
 public class LatestRatesListActivity extends ListActivity implements PullToRefreshAttacher.OnRefreshListener {
 	private static final String TAG = LatestRatesListActivity.class.getName();
 
 	private PullToRefreshAttacher pullToRefreshAttacher;
+	private CurrenciesDAO currenciesDAO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +37,34 @@ public class LatestRatesListActivity extends ListActivity implements PullToRefre
 
 	    pullToRefreshAttacher = new PullToRefreshAttacher(this);
 	    pullToRefreshAttacher.setRefreshableView(getListView(), this);
+
+	    currenciesDAO = new CurrenciesDAO(this);
     }
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+
+		try {
+			currenciesDAO.open();
+
+			if (currenciesDAO.getAllCurrencies().isEmpty()) {
+				for (String currencyName : getResources().getStringArray(R.array.initial_currencies)) {
+					currenciesDAO.createCurrency(currencyName, 0.0);
+				}
+			}
+		} catch (SQLiteException e) {
+			e.printStackTrace();
+			finish();
+		}
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+
+		currenciesDAO.close();
+	}
 
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
@@ -94,7 +120,7 @@ public class LatestRatesListActivity extends ListActivity implements PullToRefre
 	private void updateRates() {
 		new AsyncTask<Void, Void, Latest>() {
 			@Override
-			protected Latest doInBackground(Void... dummy) {
+			protected Latest doInBackground(Void... voids) {
 				Latest latest = null;
 				HttpURLConnection urlConnection = null;
 
@@ -108,13 +134,19 @@ public class LatestRatesListActivity extends ListActivity implements PullToRefre
 					List<Pair<String, Double>> allRates = latest.getRates();
 					List<Pair<String, Double>> filteredRates = new ArrayList<Pair<String, Double>>();
 
-					for (String currency : getPreferedCurrencies()) {
+					for (Currency currency : currenciesDAO.getAllCurrencies()) {
+						String name = currency.getName();
+
 						for (Pair<String, Double> rate : allRates) {
-							if (currency.equals(rate.first.toLowerCase())) {
+							if (name.equals(rate.first)) {
 								filteredRates.add(rate);
 								break;
 							}
 						}
+					}
+
+					for (Pair<String, Double> rate : filteredRates) {
+						currenciesDAO.updateCurrency(rate.first, rate.second);
 					}
 
 					latest.setRates(filteredRates);
@@ -149,17 +181,5 @@ public class LatestRatesListActivity extends ListActivity implements PullToRefre
 			}
 		}
 		super.onActivityResult(requestCode, resultCode, data);
-	}
-
-	public ArrayList<String> getPreferedCurrencies() {
-		SharedPreferences sharedPreferences = getSharedPreferences("application_settings", MODE_PRIVATE);
-		Set<String> preferredCurrencies = sharedPreferences.getStringSet("preferred_currencies", null);
-
-		if (preferredCurrencies == null) {
-			return new ArrayList<String>(
-					Arrays.asList(getResources().getStringArray(R.array.initial_currencies)));
-		} else {
-			return new ArrayList<String>(preferredCurrencies);
-		}
 	}
 }
