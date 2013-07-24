@@ -62,6 +62,15 @@ public class CurrenciesDAO {
 				CurrencySQLiteHelper.COLUMN_NAME + " = '" + name + "'", null);
 	}
 
+	public int updateCurrency(long id, String name, double value) {
+		ContentValues values = new ContentValues();
+		values.put(CurrencySQLiteHelper.COLUMN_NAME, name);
+		values.put(CurrencySQLiteHelper.COLUMN_VALUE, value);
+
+		return database.update(CurrencySQLiteHelper.TABLE_CURRENCIES, values,
+				CurrencySQLiteHelper.COLUMN_ID + " = " + id, null);
+	}
+
 	public int deleteCurrency(String name) {
 		return database.delete(CurrencySQLiteHelper.TABLE_CURRENCIES,
 				CurrencySQLiteHelper.COLUMN_NAME + " = '" + name + "'", null);

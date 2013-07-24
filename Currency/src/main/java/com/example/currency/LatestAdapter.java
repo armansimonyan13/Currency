@@ -1,5 +1,8 @@
 package com.example.currency;
 
+import android.content.ClipData;
+import android.content.ClipDescription;
+import android.util.Log;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class LatestAdapter extends BaseAdapter {
+	private static final String TAG = LatestAdapter.class.getName();
+
 	private LatestRatesListActivity activity;
 	private Latest latest;
 	private LayoutInflater inflater;
@@ -48,6 +53,27 @@ public class LatestAdapter extends BaseAdapter {
 
 		((TextView) view.findViewById(R.id.name)).setText(pair.first);
 		((TextView) view.findViewById(R.id.value)).setText(pair.second.toString());
+
+		view.setTag(pair.first);
+
+		view.setOnLongClickListener(new View.OnLongClickListener() {
+			@Override
+			public boolean onLongClick(View view) {
+				String text = (String) view.getTag();
+				ClipData.Item item = new ClipData.Item(text);
+				ClipData clipData = new ClipData(text, new String[]{ClipDescription.MIMETYPE_TEXT_PLAIN}, item);
+				View.DragShadowBuilder dragShadowBuilder = new CurrencyDragShadowBuilder(view);
+
+				view.startDrag(clipData, dragShadowBuilder, null, 0);
+				return false;
+			}
+		});
+
+		view.setOnDragListener(new OnCurrencyDragEventListener() {
+			public void replace(String name1, String name2) {
+				activity.replace(name1, name2);
+			}
+		});
 
 		ImageView flagImage = (ImageView) view.findViewById(R.id.flag);
 

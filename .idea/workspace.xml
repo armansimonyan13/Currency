@@ -22,13 +22,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34139c82-1476-473c-88b4-ff53a31277c3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrenciesDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/Currency.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrencySQLiteHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/AvailableCurrenciesActivity.java" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/AvailableCurrenciesActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/AvailableCurrenciesAdapter.java" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/AvailableCurrenciesAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrencyCursorAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrencyDragShadowBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/OnCurrencyDragEventListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Currency/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Currency/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrenciesDAO.java" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrenciesDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestAdapter.java" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestRatesListActivity.java" afterPath="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestRatesListActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Currency/src/main/res/values/initial_currencies.xml" afterPath="$PROJECT_DIR$/Currency/src/main/res/values/initial_currencies.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Currency.iws" />
@@ -47,6 +47,23 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestAdapter.java" line="61" class="com.example.currency.LatestAdapter$1" package="com.example.currency">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -84,23 +101,6 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrenciesDAO.java" line="87" class="com.example.currency.CurrenciesDAO" package="com.example.currency">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -109,7 +109,79 @@
     <favorites_list name="Currency" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="LatestAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="0" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="1818">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1433#1884#0" expanded="true" />
+                <element signature="e#1879#1880#0" expanded="true" />
+                <element signature="e#1913#2046#0" expanded="true" />
+                <element signature="e#2041#2042#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LatestRatesListActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestRatesListActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="171" column="12" selection-start="4875" selection-end="4875" vertical-scroll-proportion="0.0" vertical-offset="2889" max-vertical-offset="3240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CurrencyCursorAdapter.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrencyCursorAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="0" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.7222222" vertical-offset="630" max-vertical-offset="1368">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1074#1528#0" expanded="true" />
+                <element signature="e#1523#1524#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OnCurrencyDragEventListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/OnCurrencyDragEventListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="53" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.0" vertical-offset="522" max-vertical-offset="882">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CurrenciesDAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrenciesDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="34" selection-start="2049" selection-end="2049" vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="1980">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2636#2646#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CurrencyDragShadowBuilder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrencyDragShadowBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="8" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="450">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -169,22 +241,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Currency/src/main/res/layout/activity_about.xml" />
-        <option value="$PROJECT_DIR$/Currency/src/main/res/menu/main.xml" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/Currency/src/main/res/layout/view_item_rate.xml" />
         <option value="$PROJECT_DIR$/Currency/src/main/res/layout/activity_available_currencies.xml" />
         <option value="$PROJECT_DIR$/Currency/src/main/res/values/available_currencies_string_array.xml" />
         <option value="$PROJECT_DIR$/Currency/src/main/res/layout/view_item_available_currencies.xml" />
-        <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestAdapter.java" />
-        <option value="$PROJECT_DIR$/Currency/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/Currency.java" />
         <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrencySQLiteHelper.java" />
         <option value="$PROJECT_DIR$/Currency/src/main/res/values/initial_currencies.xml" />
-        <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrenciesDAO.java" />
         <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/AvailableCurrenciesAdapter.java" />
         <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/AvailableCurrenciesActivity.java" />
+        <option value="$PROJECT_DIR$/Currency/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrencyDragShadowBuilder.java" />
+        <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/OnCurrencyDragEventListener.java" />
+        <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrenciesDAO.java" />
+        <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestAdapter.java" />
         <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestRatesListActivity.java" />
+        <option value="$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrencyCursorAdapter.java" />
       </list>
     </option>
   </component>
@@ -220,8 +292,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -349,11 +421,11 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -471,8 +543,8 @@
       <option name="ACTIVITY_CLASS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="PREFERRED_AVD" value="And_4_2_2" />
+      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
+      <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
       <option name="WIPE_USER_DATA" value="false" />
@@ -547,7 +619,11 @@
       <created>1374442475457</created>
       <updated>1374442475457</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added support of sqlite database">
+      <created>1374611348823</created>
+      <updated>1374611348823</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -555,29 +631,29 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4141252" sideWeight="0.4996066" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41252005" sideWeight="0.4996066" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49598715" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8956661" sideWeight="0.5003934" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5216693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43017656" sideWeight="0.4996066" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7977528" sideWeight="0.4996066" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54735154" sideWeight="0.4996066" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23446105" sideWeight="0.5858748" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23446105" sideWeight="0.58747995" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3691814" sideWeight="0.4996066" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939324" sideWeight="0.7078652" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -623,7 +699,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="- added 3 missing images for bitcoin, gold and silver&#10;- added functionality to the &quot;settings&quot; menu item to open the list of available currencies&#10;- added checkbox to the list item of available currencies&#10;- recent rates activity now shows only preferred currencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Changed minSdkVersion from 7 to 11&#10;- Added initial version of &quot;CurrencyCursorAdapter&quot;&#10;- Added simple drag &amp; drop functionality" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -641,46 +717,13 @@
     <MESSAGE value="added flag for &quot;Euro&quot;&#10;" />
     <MESSAGE value="Added initial classes for list activity for available currencies." />
     <MESSAGE value="- added 3 missing images for bitcoin, gold and silver&#10;- added functionality to the &quot;settings&quot; menu item to open the list of available currencies&#10;- added checkbox to the list item of available currencies&#10;- recent rates activity now shows only preferred currencies" />
+    <MESSAGE value="added support of sqlite database" />
+    <MESSAGE value="- Changed minSdkVersion from 7 to 11&#10;- Added initial version of &quot;CurrencyCursorAdapter&quot;&#10;- Added simple drag &amp; drop functionality" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1131" selection-end="1131" vertical-scroll-proportion="0.6130031" vertical-offset="576" max-vertical-offset="1242">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/database/sqlite/SQLiteOpenHelper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="50" selection-start="821" selection-end="821" vertical-scroll-proportion="0.78018576" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Currency/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="25" selection-start="133" selection-end="133" vertical-scroll-proportion="0.060606062" vertical-offset="0" max-vertical-offset="828">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/Currency.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="118" selection-end="118" vertical-scroll-proportion="0.32142857" vertical-offset="0" max-vertical-offset="666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ActionBarPullToRefresh/src/main/java/uk/co/senab/actionbarpulltorefresh/library/PullToRefreshAttacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="13" selection-start="1902" selection-end="1902" vertical-scroll-proportion="0.49569708" vertical-offset="72" max-vertical-offset="14166">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrencySQLiteHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="49" selection-start="375" selection-end="375" vertical-scroll-proportion="0.26785713" vertical-offset="72" max-vertical-offset="756">
@@ -699,40 +742,22 @@
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/widget/ListView.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="6" selection-start="4592" selection-end="4592" vertical-scroll-proportion="0.5955882" vertical-offset="1764" max-vertical-offset="2304">
-          <folding />
-        </state>
+        <state line="108" column="6" selection-start="4592" selection-end="4592" vertical-scroll-proportion="0.5955882" vertical-offset="1764" max-vertical-offset="2304" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/java/lang/Object.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="29" selection-start="929" selection-end="929" vertical-scroll-proportion="0.55789477" vertical-offset="345" max-vertical-offset="630">
-          <folding />
-        </state>
+        <state line="29" column="29" selection-start="929" selection-end="929" vertical-scroll-proportion="0.55789477" vertical-offset="345" max-vertical-offset="630" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/database/AbstractWindowedCursor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.0" vertical-offset="1070" max-vertical-offset="1206">
-          <folding />
-        </state>
+        <state line="62" column="0" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.0" vertical-offset="1070" max-vertical-offset="1206" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/database/AbstractCursor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="0" selection-start="4616" selection-end="4616" vertical-scroll-proportion="0.0" vertical-offset="2456" max-vertical-offset="2592">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrenciesDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="0" selection-start="2745" selection-end="2745" vertical-scroll-proportion="0.2827381" vertical-offset="1471" max-vertical-offset="1818">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2282#2292#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="139" column="0" selection-start="4616" selection-end="4616" vertical-scroll-proportion="0.0" vertical-offset="2456" max-vertical-offset="2592" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/AvailableCurrenciesAdapter.java">
@@ -761,10 +786,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrencyDragShadowBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="8" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="450">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/OnCurrencyDragEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="53" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.0" vertical-offset="522" max-vertical-offset="882">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrenciesDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="34" selection-start="2049" selection-end="2049" vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="1980">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2636#2646#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestRatesListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1117" selection-end="1117" vertical-scroll-proportion="-7.749226" vertical-offset="2791" max-vertical-offset="3114">
+        <state line="171" column="12" selection-start="4875" selection-end="4875" vertical-scroll-proportion="0.0" vertical-offset="2889" max-vertical-offset="3240">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/LatestAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="0" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="1818">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1433#1884#0" expanded="true" />
+            <element signature="e#1879#1880#0" expanded="true" />
+            <element signature="e#1913#2046#0" expanded="true" />
+            <element signature="e#2041#2042#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Currency/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="32" selection-start="317" selection-end="317" vertical-scroll-proportion="0.48071218" vertical-offset="18" max-vertical-offset="828">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Currency/src/main/java/com/example/currency/CurrencyCursorAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.7222222" vertical-offset="630" max-vertical-offset="1368">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1074#1528#0" expanded="true" />
+            <element signature="e#1523#1524#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

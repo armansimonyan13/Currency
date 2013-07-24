@@ -182,4 +182,11 @@ public class LatestRatesListActivity extends ListActivity implements PullToRefre
 		}
 		super.onActivityResult(requestCode, resultCode, data);
 	}
+
+	public void replace(String name1, String name2) {
+		Currency currency1 = currenciesDAO.getCurrency(name1);
+		Currency currency2 = currenciesDAO.getCurrency(name2);
+		currenciesDAO.updateCurrency(currency1.getId(), currency2.getName(), currency2.getValue());
+		currenciesDAO.updateCurrency(currency2.getId(), currency1.getName(), currency1.getValue());
+	}
 }
