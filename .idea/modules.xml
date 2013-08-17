@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/ActionBarPullToRefresh/ActionBarPullToRefresh.iml" filepath="$PROJECT_DIR$/ActionBarPullToRefresh/ActionBarPullToRefresh.iml" />
       <module fileurl="file://$PROJECT_DIR$/Currency.iml" filepath="$PROJECT_DIR$/Currency.iml" />
       <module fileurl="file://$PROJECT_DIR$/Currency/Currency-Currency.iml" filepath="$PROJECT_DIR$/Currency/Currency-Currency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DragSortListView/DragSortListView.iml" filepath="$PROJECT_DIR$/DragSortListView/DragSortListView.iml" />
     </modules>
   </component>
 </project>

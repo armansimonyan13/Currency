@@ -6,15 +6,27 @@ buildscript {
         classpath 'com.android.tools.build:gradle:0.5.+'
     }
 }
+
 apply plugin: 'android'
 
 repositories {
     mavenCentral()
 }
 
+sourceSets {
+    testLocal {
+        java.srcDir file('src/test/java')
+		resources.srcDir file('src/test/res')
+    }
+}
+
 dependencies {
     compile 'com.android.support:support-v4:13.0.+'
     compile project(':ActionBarPullToRefresh')
+    compile project(':DragSortListView')
+
+    testLocalCompile 'junit:junit:4.8.+'
+    testLocalCompile 'com.android.support:support-v4:13.0.+'
 }
 
 android {
@@ -26,3 +38,19 @@ android {
         targetSdkVersion 16
     }
 }
+
+task localTest(type: Test, dependsOn: assemble) {
+	testClassesDir = sourceSets.testLocal.output.classesDir
+
+	android.sourceSets.main.java.srcDirs.each { dir ->
+		def buildDir = dir.getAbsolutePath().split('/')
+		buildDir = (buildDir[0..(buildDir.length - 4)] + ['build', 'classes', 'debug']).join('/')
+
+		sourceSets.testLocal.compileClasspath += files(buildDir)
+		sourceSets.testLocal.runtimeClasspath += files(buildDir)
+	}
+
+	classpath = sourceSets.testLocal.runtimeClasspath
+}
+
+check.dependsOn localTest

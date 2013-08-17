@@ -2,7 +2,7 @@ package com.example.currency;
 
 import android.widget.ImageView;
 
-public class LatesRatesItem {
+public class SelectedCurrenciesItemView {
 	private ImageView flag;
 	private String name;
 	private Double value;

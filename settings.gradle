@@ -1,1 +1,1 @@
-include ':Currency', ':ActionBarPullToRefresh'
+include ':Currency', ':ActionBarPullToRefresh', ':DragSortListView'

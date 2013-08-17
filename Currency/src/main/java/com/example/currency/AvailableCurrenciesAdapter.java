@@ -10,11 +10,11 @@ public class AvailableCurrenciesAdapter extends BaseAdapter {
 	private static final String TAG = AvailableCurrenciesAdapter.class.getName();
 
 	private Context context;
-	private CurrenciesDAO currenciesDAO;
+	private AvailableCurrenciesDAO currenciesDAO;
 	private LayoutInflater inflater;
 	private String[] availableCurrencies;
 
-	public AvailableCurrenciesAdapter(Context context, CurrenciesDAO currenciesDAO) {
+	public AvailableCurrenciesAdapter(Context context, AvailableCurrenciesDAO currenciesDAO) {
 		this.context = context;
 		this.currenciesDAO = currenciesDAO;
 		inflater = LayoutInflater.from(context);
@@ -51,7 +51,7 @@ public class AvailableCurrenciesAdapter extends BaseAdapter {
 		((TextView) view.findViewById(R.id.name)).setText(currency.toUpperCase());
 		final CheckBox checkBox = (CheckBox) view.findViewById(R.id.selection);
 		checkBox.setTag(currency);
-		if (currenciesDAO.getCurrency(currency.toUpperCase()).getName() != null) {
+		if (currenciesDAO.get(currency.toUpperCase()).getName() != null) {
 			checkBox.setChecked(true);
 		} else {
 			checkBox.setChecked(false);
@@ -60,9 +60,9 @@ public class AvailableCurrenciesAdapter extends BaseAdapter {
 			@Override
 			public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
 				if (isChecked) {
-					currenciesDAO.createCurrency(((String) checkBox.getTag()).toUpperCase(), 0.0);
+					currenciesDAO.create(((String) checkBox.getTag()).toUpperCase(), 0.0);
 				} else {
-					currenciesDAO.deleteCurrency(((String) checkBox.getTag()).toUpperCase());
+					currenciesDAO.delete(((String) checkBox.getTag()).toUpperCase());
 				}
 			}
 		});

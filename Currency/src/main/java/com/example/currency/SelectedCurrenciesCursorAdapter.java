@@ -1,7 +1,5 @@
 package com.example.currency;
 
-import android.content.ClipData;
-import android.content.ClipDescription;
 import android.content.Context;
 import android.database.Cursor;
 import android.view.LayoutInflater;
@@ -11,23 +9,32 @@ import android.widget.CursorAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CurrencyCursorAdapter extends CursorAdapter {
+public class SelectedCurrenciesCursorAdapter extends CursorAdapter {
 	private LayoutInflater layoutInflater;
+	private SelectedCurrenciesListActivity activity;
+	private OnCurrencyDragEventListener currencyDragEventListener = new OnCurrencyDragEventListener() {
+		@Override
+		public void replace(String name1, String name2) {
+//			activity.replace(name1, name2);
+		}
+	};
 
-	public CurrencyCursorAdapter(Context context, Cursor cursor, int flag) {
+	public SelectedCurrenciesCursorAdapter(SelectedCurrenciesListActivity context, Cursor cursor, int flag) {
 		super(context, cursor, flag);
+		this.activity = context;
 		layoutInflater = LayoutInflater.from(context);
 	}
 
 	@Override
 	public void bindView(View view, Context context, Cursor cursor) {
-		String name = cursor.getString(cursor.getColumnIndex(CurrencySQLiteHelper.COLUMN_NAME));
-		double value = cursor.getDouble(cursor.getColumnIndex(CurrencySQLiteHelper.COLUMN_VALUE));
+		String name = cursor.getString(cursor.getColumnIndex(AvailableCurrenciesSQLiteHelper.COLUMN_NAME));
+		double value = cursor.getDouble(cursor.getColumnIndex(AvailableCurrenciesSQLiteHelper.COLUMN_VALUE));
 		((TextView) view.findViewById(R.id.name)).setText(name);
 		((TextView) view.findViewById(R.id.value)).setText(String.valueOf(value));
 
 		view.setTag(name);
 
+		/*
 		view.setOnLongClickListener(new View.OnLongClickListener() {
 			@Override
 			public boolean onLongClick(View view) {
@@ -37,15 +44,13 @@ public class CurrencyCursorAdapter extends CursorAdapter {
 				View.DragShadowBuilder dragShadowBuilder = new CurrencyDragShadowBuilder(view);
 
 				view.startDrag(clipData, dragShadowBuilder, null, 0);
+				view.setAlpha(0.0f);
 				return false;
 			}
 		});
+		*/
 
-		view.setOnDragListener(new OnCurrencyDragEventListener() {
-//			public void replace(String name1, String name2) {
-//				activity.replace(name1, name2);
-//			}
-		});
+		view.setOnDragListener(currencyDragEventListener);
 
 		ImageView flagImage = (ImageView) view.findViewById(R.id.flag);
 

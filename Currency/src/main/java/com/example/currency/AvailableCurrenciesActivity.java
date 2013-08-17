@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 public class AvailableCurrenciesActivity extends ListActivity {
 
-	private CurrenciesDAO currenciesDAO;
+	private AvailableCurrenciesDAO currenciesDAO;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -14,7 +14,7 @@ public class AvailableCurrenciesActivity extends ListActivity {
 
 		setContentView(R.layout.activity_available_currencies);
 
-		currenciesDAO = new CurrenciesDAO(this);
+		currenciesDAO = new AvailableCurrenciesDAO(this);
 		setListAdapter(new AvailableCurrenciesAdapter(this, currenciesDAO));
 	}
 
