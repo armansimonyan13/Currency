@@ -37,14 +37,18 @@ public class SelectedCurrenciesDAO {
 	}
 
 	public boolean isEmpty() {
-		Cursor cursor = database.rawQuery(QUERY_COUNT, null);
-		cursor.moveToFirst();
-
-		if (cursor.getInt(0) == 0) {
+		if (size() == 0) {
 			return true;
 		}
 
 		return false;
+	}
+
+	public int size() {
+		Cursor cursor = database.rawQuery(QUERY_COUNT, null);
+		cursor.moveToFirst();
+
+		return cursor.getInt(0);
 	}
 
 	public Cursor getCursor() {
@@ -58,6 +62,7 @@ public class SelectedCurrenciesDAO {
 
 	public long insert(long currencyId) {
 		ContentValues values = new ContentValues();
+		values.put(SelectedCurrenciesSQLiteHelper.COLUMN_ID, size());
 		values.put(SelectedCurrenciesSQLiteHelper.COLUMN_CURRENCY_ID, currencyId);
 
 		return database.insert(AvailableCurrenciesSQLiteHelper.TABLE_NAME, null, values);

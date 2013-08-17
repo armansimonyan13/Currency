@@ -14,7 +14,7 @@ public class SelectedCurrenciesSQLiteHelper extends SQLiteOpenHelper {
 
 	static final String DATABASE_CREATE = "create table "
 			+ TABLE_NAME + "("
-			+ COLUMN_ID + " integer primary key autoincrement, "
+			+ COLUMN_ID + " integer primary key, "
 			+ COLUMN_CURRENCY_ID + " integer);";
 
 	static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
