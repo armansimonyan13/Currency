@@ -6,7 +6,8 @@ import android.os.Bundle;
 
 public class AvailableCurrenciesActivity extends ListActivity {
 
-	private AvailableCurrenciesDAO currenciesDAO;
+	private AvailableCurrenciesDbAdapter availableCurrenciesDbAdapter;
+	private SelectedCurrenciesDbAdapter selectedCurrenciesDbAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -14,22 +15,26 @@ public class AvailableCurrenciesActivity extends ListActivity {
 
 		setContentView(R.layout.activity_available_currencies);
 
-		currenciesDAO = new AvailableCurrenciesDAO(this);
-		setListAdapter(new AvailableCurrenciesAdapter(this, currenciesDAO));
+		availableCurrenciesDbAdapter = new AvailableCurrenciesDbAdapter(this);
+		selectedCurrenciesDbAdapter = new SelectedCurrenciesDbAdapter(this);
+		setListAdapter(new AvailableCurrenciesAdapter(
+				this, availableCurrenciesDbAdapter.fetchAll(), selectedCurrenciesDbAdapter));
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
 
-		currenciesDAO.open();
+		availableCurrenciesDbAdapter.open();
+		selectedCurrenciesDbAdapter.open();
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
 
-		currenciesDAO.close();
+		availableCurrenciesDbAdapter.close();
+		selectedCurrenciesDbAdapter.close();
 	}
 
 	@Override

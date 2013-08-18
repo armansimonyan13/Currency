@@ -24,10 +24,10 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 
 	private PullToRefreshAttacher pullToRefreshAttacher;
 
-	private SelectedCurrenciesDAO selectedCurrenciesDAO;
-	private SelectedCurrenciesCursorAdapter currencyCursorAdapter;
+	private SelectedCurrenciesDbAdapter selectedCurrenciesDbAdapter;
+	private SelectedCurrenciesCursorAdapter selectedCurrenciesCursorAdapter;
 
-	private AvailableCurrenciesDAO availableCurrenciesDAO;
+	private AvailableCurrenciesDbAdapter availableCurrenciesDbAdapter;
 
 	private DragSortListView  dslv;
 	private DragSortController controller;
@@ -49,7 +49,8 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 						Log.d("+++++", "" + from);
 						Log.d("+++++", "" + to);
 
-						CurrencyData fromCurrency = (CurrencyData) getListAdapter().getItem(from);
+						selectedCurrenciesDbAdapter.replace(from, to);
+						((SelectedCurrenciesCursorAdapter) getListAdapter()).notifyDataSetChanged();
 					}
 				}
 			};
@@ -58,7 +59,7 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 			new DragSortListView.RemoveListener() {
 				@Override
 				public void remove(int which) {
-					// adapter.remove(adapter.getItem(which));
+					selectedCurrenciesDbAdapter.delete(which);
 				}
 			};
 
@@ -67,9 +68,9 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_latest_rates_list);
 
-	    if (savedInstanceState == null) {
-		    updateRates();
-	    }
+//	    if (savedInstanceState == null) {
+//		    updateRates();
+//	    }
 
 	    dslv = (DragSortListView) getListView();
 
@@ -84,8 +85,8 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 //	    pullToRefreshAttacher = new PullToRefreshAttacher(this);
 //	    pullToRefreshAttacher.setRefreshableView(getListView(), this);
 
-	    selectedCurrenciesDAO = new SelectedCurrenciesDAO(this);
-	    availableCurrenciesDAO = new AvailableCurrenciesDAO(this);
+	    selectedCurrenciesDbAdapter = new SelectedCurrenciesDbAdapter(this);
+	    availableCurrenciesDbAdapter = new AvailableCurrenciesDbAdapter(this);
     }
 
 	@Override
@@ -93,23 +94,24 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 		super.onResume();
 
 		try {
-			selectedCurrenciesDAO.open();
+			selectedCurrenciesDbAdapter.open();
+			availableCurrenciesDbAdapter.open();
 
-			if (selectedCurrenciesDAO.isEmpty()) {
+			if (selectedCurrenciesDbAdapter.isEmpty()) {
 				for (String currencyName : getResources().getStringArray(R.array.initial_currencies)) {
-					CurrencyData currencyData = availableCurrenciesDAO.get(currencyName);
+					// TODO: check if cursor valid
+					CurrencyData currencyData = AvailableCurrenciesDbAdapter.cursorToCurrency(
+							availableCurrenciesDbAdapter.fetch(currencyName));
 
-					if (currencyData != null) {
-						selectedCurrenciesDAO.insert(currencyData.getId());
-					}
+					selectedCurrenciesDbAdapter.insert(currencyData.getId());
 				}
 			}
 
-			currencyCursorAdapter = new SelectedCurrenciesCursorAdapter(
+			selectedCurrenciesCursorAdapter = new SelectedCurrenciesCursorAdapter(
 					SelectedCurrenciesListActivity.this,
-					selectedCurrenciesDAO.getCursor(), 0);
+					selectedCurrenciesDbAdapter.fetchAll(), 0);
 
-			setListAdapter(currencyCursorAdapter);
+			setListAdapter(selectedCurrenciesCursorAdapter);
 		} catch (SQLiteException e) {
 			e.printStackTrace();
 			finish();
@@ -120,7 +122,8 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 	protected void onPause() {
 		super.onPause();
 
-		selectedCurrenciesDAO.close();
+		selectedCurrenciesDbAdapter.close();
+		availableCurrenciesDbAdapter.close();
 	}
 
 	@Override
@@ -189,9 +192,9 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 					latest = latestReader.read();
 
 					List<Pair<String, Double>> allRates = latest.getRates();
-					availableCurrenciesDAO.deleteAll();
+					availableCurrenciesDbAdapter.deleteAll();
 					for (Pair<String, Double> rate : allRates) {
-						availableCurrenciesDAO.create(rate.first, rate.second);
+						availableCurrenciesDbAdapter.create(rate.first, rate.second);
 					}
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -204,7 +207,8 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 
 			@Override
 			protected void onPostExecute(Void voids) {
-				((CursorAdapter) getListAdapter()).changeCursor(selectedCurrenciesDAO.getCursor());
+				((CursorAdapter) getListAdapter()).changeCursor(
+						selectedCurrenciesDbAdapter.fetchAll());
 
 //				pullToRefreshAttacher.setRefreshComplete();
 			}
@@ -220,22 +224,6 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 		}
 		super.onActivityResult(requestCode, resultCode, data);
 	}
-
-//	public void replace(String name1, String name2) {
-//		CurrencyData currency1 = selectedCurrenciesDAO.get(name1);
-//		CurrencyData currency2 = selectedCurrenciesDAO.get(name2);
-//		selectedCurrenciesDAO.update(currency1.getId(), currency2.getName(), currency2.getValue());
-//		selectedCurrenciesDAO.update(currency2.getId(), currency1.getName(), currency1.getValue());
-//		currencyCursorAdapter.changeCursor(selectedCurrenciesDAO.getCursor());
-//	}
-//
-//	public void replace(int from, int to) {
-//		CurrencyData fromCurrency = selectedCurrenciesDAO.get(from);
-//		CurrencyData toCurrency = selectedCurrenciesDAO.get(to);
-//		selectedCurrenciesDAO.update(fromCurrency.getId(), toCurrency.getName(), toCurrency.getValue());
-//		selectedCurrenciesDAO.update(toCurrency.getId(), fromCurrency.getName(), fromCurrency.getValue());
-//		currencyCursorAdapter.changeCursor(selectedCurrenciesDAO.getCursor());
-//	}
 
 	public DragSortController buildController(DragSortListView dslv) {
 		DragSortController controller = new DragSortController(dslv);

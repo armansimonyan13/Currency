@@ -1,86 +1,54 @@
 package com.example.currency;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
 
-public class AvailableCurrenciesAdapter extends BaseAdapter {
+public class AvailableCurrenciesAdapter extends CursorAdapter {
 	private static final String TAG = AvailableCurrenciesAdapter.class.getName();
 
 	private Context context;
-	private AvailableCurrenciesDAO currenciesDAO;
 	private LayoutInflater inflater;
-	private String[] availableCurrencies;
+	private SelectedCurrenciesDbAdapter selectedCurrenciesDAO;
 
-	public AvailableCurrenciesAdapter(Context context, AvailableCurrenciesDAO currenciesDAO) {
+	public AvailableCurrenciesAdapter(Context context, Cursor cursor, SelectedCurrenciesDbAdapter selectedCurrenciesDAO) {
+		super(context, cursor, 0);
 		this.context = context;
-		this.currenciesDAO = currenciesDAO;
+		this.selectedCurrenciesDAO = selectedCurrenciesDAO;
 		inflater = LayoutInflater.from(context);
-		availableCurrencies = context.getResources().getStringArray(R.array.available_currencies);
 	}
 
 	@Override
-	public long getItemId(int i) {
-		return 0;
+	public View newView(Context context, Cursor cursor, ViewGroup viewGroup) {
+		return inflater.inflate(R.layout.view_item_available_currencies, viewGroup, false);
 	}
 
 	@Override
-	public Object getItem(int i) {
-		return null;
-	}
-
-	@Override
-	public int getCount() {
-		return availableCurrencies.length;
-	}
-
-	@Override
-	public View getView(int i, View convertView, ViewGroup viewGroup) {
-		View view;
-
-		if (convertView == null) {
-			view = inflater.inflate(R.layout.view_item_available_currencies, viewGroup, false);
-		} else {
-			view = convertView;
-		}
-
-		String currency = availableCurrencies[i];
-
-		((TextView) view.findViewById(R.id.name)).setText(currency.toUpperCase());
-		final CheckBox checkBox = (CheckBox) view.findViewById(R.id.selection);
-		checkBox.setTag(currency);
-		if (currenciesDAO.get(currency.toUpperCase()).getName() != null) {
-			checkBox.setChecked(true);
-		} else {
-			checkBox.setChecked(false);
-		}
-		checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-			@Override
-			public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-				if (isChecked) {
-					currenciesDAO.create(((String) checkBox.getTag()).toUpperCase(), 0.0);
-				} else {
-					currenciesDAO.delete(((String) checkBox.getTag()).toUpperCase());
-				}
-			}
-		});
-
+	public void bindView(View view, Context context, Cursor cursor) {
+		TextView name = (TextView) view.findViewById(R.id.name);
+		TextView description = (TextView) view.findViewById(R.id.description);
 		ImageView flagImage = (ImageView) view.findViewById(R.id.flag);
 
-		flagImage.setTag(currency);
-		int imageId = context.getResources().getIdentifier("flag_" + currency, "drawable", context.getPackageName());
+		String currencyName = cursor.getString(
+				cursor.getColumnIndex(AvailableCurrenciesDbAdapter.COLUMN_NAME));
+		name.setText(currencyName);
+		description.setText(cursor.getString(
+				cursor.getColumnIndex(AvailableCurrenciesDbAdapter.COLUMN_VALUE)));
 
-		if (imageId == 0) {
+		int flagResourceId = context.getResources().getIdentifier(
+				"flag_" + currencyName.toLowerCase(), "drawable", context.getPackageName());
+
+		if (flagResourceId == 0) {
 			flagImage.setImageResource(R.drawable.flag_not_available);
 		} else {
-			flagImage.setImageResource(imageId);
+			flagImage.setImageResource(flagResourceId);
 		}
 
-		int stringId = context.getResources().getIdentifier("currency_" + currency, "string", context.getPackageName());
-		((TextView) view.findViewById(R.id.description)).setText(" - " + context.getResources().getString(stringId));
-
-		return view;
+		if (selectedCurrenciesDAO.contains(cursor.getInt(0))) {
+			((CheckBox) view.findViewById(R.id.selection)).setChecked(true);
+		}
 	}
 }

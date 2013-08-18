@@ -20,7 +20,7 @@ public class SelectedCurrenciesDAOTest {
 
 	@Test
 	public void testQueryJoined() throws Exception {
-		String query = SelectedCurrenciesDAO.QUERY_JOINED;
+		String query = SelectedCurrenciesDbAdapter.QUERY_JOINED;
 		String golden = "SELECT _id, name, value FROM selected_currencies" +
 				" JOIN available_currencies ON selected_currencies.currency_id = available_currencies._id;";
 		assertEquals("Check joined query:", query, golden);
