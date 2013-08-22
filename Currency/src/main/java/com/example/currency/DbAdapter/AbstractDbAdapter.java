@@ -1,4 +1,4 @@
-package com.example.currency;
+package com.example.currency.DbAdapter;
 
 import android.content.Context;
 import android.database.SQLException;
@@ -11,14 +11,14 @@ public class AbstractDbAdapter {
 
 	protected static final String TABLE_CREATE_AVAILABLE_CURRENCIES = "create table "
 			+ AvailableCurrenciesDbAdapter.DATABASE_TABLE + "("
-			+ AvailableCurrenciesDbAdapter.COLUMN_ID + " integer primary key autoincrement, "
+			+ AvailableCurrenciesDbAdapter.COLUMN_ID + " integer primary key, "
 			+ AvailableCurrenciesDbAdapter.COLUMN_NAME + " text not null, "
 			+ AvailableCurrenciesDbAdapter.COLUMN_VALUE + " real);";
 
 	protected static final String TABLE_CREATE_SELECTED_CURRENCIES = "create table "
 			+ SelectedCurrenciesDbAdapter.DATABASE_TABLE + "("
 			+ SelectedCurrenciesDbAdapter.COLUMN_ID + " integer primary key, "
-			+ SelectedCurrenciesDbAdapter.COLUMN_CURRENCY_ID + " integer);";
+			+ SelectedCurrenciesDbAdapter.COLUMN_NAME + " text not null);";
 
 	protected static final String DROP_TABLE_AVAILABLE_CURRENCIES = "DROP TABLE IF EXISTS "
 			+ AvailableCurrenciesDbAdapter.DATABASE_TABLE;
@@ -39,7 +39,7 @@ public class AbstractDbAdapter {
 		@Override
 		public void onCreate(SQLiteDatabase sqLiteDatabase) {
 			sqLiteDatabase.execSQL(TABLE_CREATE_AVAILABLE_CURRENCIES);
-			sqLiteDatabase.execSQL(TABLE_CREATE_AVAILABLE_CURRENCIES);
+			sqLiteDatabase.execSQL(TABLE_CREATE_SELECTED_CURRENCIES);
 		}
 
 		@Override

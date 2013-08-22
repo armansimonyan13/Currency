@@ -1,4 +1,4 @@
-package com.example.currency;
+package com.example.currency.View;
 
 import android.widget.ImageView;
 

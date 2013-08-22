@@ -1,4 +1,4 @@
-package com.example.currency;
+package com.example.currency.Util;
 
 public class Constants {
 	public static final String URL_DOMAIN = "http://openexchangerates.org";

@@ -2,6 +2,7 @@ package com.example.currency;
 
 import static org.junit.Assert.*;
 
+import com.example.currency.DbAdapter.SelectedCurrenciesDbAdapter;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

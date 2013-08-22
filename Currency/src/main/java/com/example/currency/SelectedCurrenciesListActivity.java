@@ -2,6 +2,7 @@ package com.example.currency;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteException;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -11,6 +12,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
+import com.example.currency.CursorAdapter.SelectedCurrenciesCursorAdapter;
+import com.example.currency.DbAdapter.AvailableCurrenciesDbAdapter;
+import com.example.currency.DbAdapter.SelectedCurrenciesDbAdapter;
+import com.example.currency.Util.Constants;
+import com.example.currency.Util.Latest;
+import com.example.currency.Util.LatestReader;
 import com.mobeta.android.dslv.DragSortController;
 import com.mobeta.android.dslv.DragSortListView;
 import uk.co.senab.actionbarpulltorefresh.library.PullToRefreshAttacher;
@@ -20,7 +27,6 @@ import java.net.URL;
 import java.util.List;
 
 public class SelectedCurrenciesListActivity extends ListActivity implements PullToRefreshAttacher.OnRefreshListener {
-	private static final String TAG = SelectedCurrenciesListActivity.class.getName();
 
 	private PullToRefreshAttacher pullToRefreshAttacher;
 
@@ -50,7 +56,8 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 						Log.d("+++++", "" + to);
 
 						selectedCurrenciesDbAdapter.replace(from, to);
-						((SelectedCurrenciesCursorAdapter) getListAdapter()).notifyDataSetChanged();
+						((SelectedCurrenciesCursorAdapter) getListAdapter())
+								.changeCursor(selectedCurrenciesDbAdapter.fetchAllJoined());
 					}
 				}
 			};
@@ -72,6 +79,7 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 //		    updateRates();
 //	    }
 
+
 	    dslv = (DragSortListView) getListView();
 
 	    controller = buildController(dslv);
@@ -87,6 +95,9 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 
 	    selectedCurrenciesDbAdapter = new SelectedCurrenciesDbAdapter(this);
 	    availableCurrenciesDbAdapter = new AvailableCurrenciesDbAdapter(this);
+
+	    selectedCurrenciesDbAdapter.open();
+	    availableCurrenciesDbAdapter.open();
     }
 
 	@Override
@@ -94,24 +105,21 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 		super.onResume();
 
 		try {
-			selectedCurrenciesDbAdapter.open();
-			availableCurrenciesDbAdapter.open();
 
 			if (selectedCurrenciesDbAdapter.isEmpty()) {
 				for (String currencyName : getResources().getStringArray(R.array.initial_currencies)) {
-					// TODO: check if cursor valid
-					CurrencyData currencyData = AvailableCurrenciesDbAdapter.cursorToCurrency(
-							availableCurrenciesDbAdapter.fetch(currencyName));
 
-					selectedCurrenciesDbAdapter.insert(currencyData.getId());
+					selectedCurrenciesDbAdapter.insert(currencyName);
 				}
 			}
 
 			selectedCurrenciesCursorAdapter = new SelectedCurrenciesCursorAdapter(
 					SelectedCurrenciesListActivity.this,
-					selectedCurrenciesDbAdapter.fetchAll(), 0);
+					selectedCurrenciesDbAdapter.fetchAllJoined(), 0);
 
 			setListAdapter(selectedCurrenciesCursorAdapter);
+
+			updateRates();
 		} catch (SQLiteException e) {
 			e.printStackTrace();
 			finish();
@@ -119,11 +127,11 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 	}
 
 	@Override
-	protected void onPause() {
-		super.onPause();
-
+	protected void onDestroy() {
 		selectedCurrenciesDbAdapter.close();
 		availableCurrenciesDbAdapter.close();
+
+		super.onDestroy();
 	}
 
 	@Override
@@ -194,7 +202,7 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 					List<Pair<String, Double>> allRates = latest.getRates();
 					availableCurrenciesDbAdapter.deleteAll();
 					for (Pair<String, Double> rate : allRates) {
-						availableCurrenciesDbAdapter.create(rate.first, rate.second);
+						availableCurrenciesDbAdapter.insert(rate.first, rate.second);
 					}
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -207,8 +215,8 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 
 			@Override
 			protected void onPostExecute(Void voids) {
-				((CursorAdapter) getListAdapter()).changeCursor(
-						selectedCurrenciesDbAdapter.fetchAll());
+				Cursor cursor = selectedCurrenciesDbAdapter.fetchAllJoined();
+				((SelectedCurrenciesCursorAdapter) getListAdapter()).changeCursor(cursor);
 
 //				pullToRefreshAttacher.setRefreshComplete();
 			}
@@ -235,5 +243,9 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 		controller.setRemoveMode(removeMode);
 
 		return controller;
+	}
+
+	public String[] getDefaultCurrencies() {
+		return getResources().getStringArray(R.array.initial_currencies);
 	}
 }

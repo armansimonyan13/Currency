@@ -3,6 +3,9 @@ package com.example.currency;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import com.example.currency.CursorAdapter.AvailableCurrenciesCursorAdapter;
+import com.example.currency.DbAdapter.AvailableCurrenciesDbAdapter;
+import com.example.currency.DbAdapter.SelectedCurrenciesDbAdapter;
 
 public class AvailableCurrenciesActivity extends ListActivity {
 
@@ -17,24 +20,31 @@ public class AvailableCurrenciesActivity extends ListActivity {
 
 		availableCurrenciesDbAdapter = new AvailableCurrenciesDbAdapter(this);
 		selectedCurrenciesDbAdapter = new SelectedCurrenciesDbAdapter(this);
-		setListAdapter(new AvailableCurrenciesAdapter(
-				this, availableCurrenciesDbAdapter.fetchAll(), selectedCurrenciesDbAdapter));
+
+		availableCurrenciesDbAdapter.open();
+		selectedCurrenciesDbAdapter.open();
+
+		setListAdapter(new AvailableCurrenciesCursorAdapter(
+				this, availableCurrenciesDbAdapter, selectedCurrenciesDbAdapter));
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
-
-		availableCurrenciesDbAdapter.open();
-		selectedCurrenciesDbAdapter.open();
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
+	}
+
+	@Override
+	protected void onDestroy() {
 
 		availableCurrenciesDbAdapter.close();
 		selectedCurrenciesDbAdapter.close();
+
+		super.onDestroy();
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package com.example.currency;
+package com.example.currency.Util;
 
 import android.util.JsonReader;
 import android.util.Pair;
@@ -14,7 +14,7 @@ public class LatestReader {
 	private JsonReader reader;
 	private Latest latest;
 
-	LatestReader(InputStream in) throws UnsupportedEncodingException {
+	public LatestReader(InputStream in) throws UnsupportedEncodingException {
 		reader = new JsonReader(new InputStreamReader(in, "UTF-8"));
 		latest = new Latest();
 	}
@@ -24,15 +24,15 @@ public class LatestReader {
 			reader.beginObject();
 			while (reader.hasNext()) {
 				String name = reader.nextName();
-				if (name.equals("disclaimer")) {
+				if ("disclaimer".equals(name)) {
 					latest.setDisclaimer(reader.nextString());
-				} else if (name.equals("license")) {
+				} else if ("license".equals(name)) {
 					latest.setLicense(reader.nextString());
-				} else if (name.equals("timestamp")) {
+				} else if ("timestamp".equals(name)) {
 					latest.setTimestamp(reader.nextString());
-				} else if (name.equals("base")) {
+				} else if ("base".equals(name)) {
 					latest.setBase(reader.nextString());
-				} else if (name.equals("rates")) {
+				} else if ("rates".equals(name)) {
 					latest.setRates(readRates());
 				}
 			}

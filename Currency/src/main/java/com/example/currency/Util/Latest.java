@@ -1,4 +1,4 @@
-package com.example.currency;
+package com.example.currency.Util;
 
 import android.util.Pair;
 
