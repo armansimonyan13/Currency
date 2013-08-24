@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteException;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -41,7 +40,7 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 	public int dragStartMode = DragSortController.ON_DOWN;
 	public int removeMode = DragSortController.FLING_REMOVE;
 
-	public boolean removeEnabled = false;
+	public boolean removeEnabled = true;
 	public boolean sortEnabled = true;
 	public boolean dragEnabled = true;
 
@@ -51,10 +50,6 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 				@Override
 				public void drop(int from, int to) {
 					if (from != to) {
-						Log.d("+++++", "Dropped");
-						Log.d("+++++", "" + from);
-						Log.d("+++++", "" + to);
-
 						selectedCurrenciesDbAdapter.replace(from, to);
 						((SelectedCurrenciesCursorAdapter) getListAdapter())
 								.changeCursor(selectedCurrenciesDbAdapter.fetchAllJoined());
@@ -236,6 +231,7 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 	public DragSortController buildController(DragSortListView dslv) {
 		DragSortController controller = new DragSortController(dslv);
 		controller.setDragHandleId(R.id.drag_handle);
+//		controller.setDragHandleId(R.id.view_item_container_selected);
 		controller.setClickRemoveId(R.id.click_remove);
 		controller.setRemoveEnabled(removeEnabled);
 		controller.setSortEnabled(sortEnabled);

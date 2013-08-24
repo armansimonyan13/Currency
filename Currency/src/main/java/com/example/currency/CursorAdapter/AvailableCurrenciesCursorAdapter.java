@@ -17,6 +17,21 @@ public class AvailableCurrenciesCursorAdapter extends CursorAdapter {
 	private LayoutInflater inflater;
 	private SelectedCurrenciesDbAdapter selectedCurrenciesDbAdapter;
 
+	private CompoundButton.OnCheckedChangeListener onCheckedChangeListener =
+			new CompoundButton.OnCheckedChangeListener() {
+				@Override
+				public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
+					String currencyName = (String) compoundButton.getTag();
+
+					if (checked) {
+						selectedCurrenciesDbAdapter.insert(currencyName);
+					} else {
+						selectedCurrenciesDbAdapter.delete(currencyName);
+					}
+
+				}
+			};
+
 	public AvailableCurrenciesCursorAdapter(
 			Context context,
 			AvailableCurrenciesDbAdapter availableCurrenciesDbAdapter,
@@ -54,6 +69,8 @@ public class AvailableCurrenciesCursorAdapter extends CursorAdapter {
 			flagImage.setImageResource(flagResourceId);
 		}
 
+		checkBox.setOnCheckedChangeListener(null);
+
 		if (selectedCurrenciesDbAdapter.contains(
 				cursor.getString(
 						cursor.getColumnIndex(AvailableCurrenciesDbAdapter.COLUMN_NAME)))) {
@@ -62,15 +79,8 @@ public class AvailableCurrenciesCursorAdapter extends CursorAdapter {
 			checkBox.setChecked(false);
 		}
 
-		checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-			@Override
-			public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
-				if (checked) {
-					selectedCurrenciesDbAdapter.insert(currencyName);
-				} else {
-					selectedCurrenciesDbAdapter.delete(currencyName);
-				}
-			}
-		});
+		checkBox.setTag(currencyName);
+
+		checkBox.setOnCheckedChangeListener(onCheckedChangeListener);
 	}
 }
