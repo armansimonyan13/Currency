@@ -40,11 +40,6 @@ public class AvailableCurrenciesDbAdapter extends AbstractDbAdapter {
 		return database.delete(DATABASE_TABLE, "1", null);
 	}
 
-	public Cursor fetchAll() {
-		return database.query(DATABASE_TABLE, allColumns,
-				null, null, null, null, null);
-	}
-
 	public Cursor fetch(long id) {
 		return database.query(DATABASE_TABLE, allColumns,
 				COLUMN_ID + " = " + id,
@@ -59,6 +54,11 @@ public class AvailableCurrenciesDbAdapter extends AbstractDbAdapter {
 		cursor.moveToFirst();
 
 		return cursor;
+	}
+
+	public Cursor fetchAll() {
+		return database.query(DATABASE_TABLE, allColumns,
+				null, null, null, null, null);
 	}
 
 	public int update(String name, double value) {
@@ -84,15 +84,11 @@ public class AvailableCurrenciesDbAdapter extends AbstractDbAdapter {
 		Cursor cursor = database.rawQuery(QUERY_COUNT, null);
 		cursor.moveToFirst();
 
-		return cursor.getInt(0);
-	}
+		int count = cursor.getInt(0);
 
-	public void replace(int from, int to) {
-		RowData fromCurrency = cursorToCurrency(fetch(from));
-		RowData toCurrency = cursorToCurrency(fetch(to));
+		cursor.close();
 
-		update(fromCurrency.getId(), toCurrency.getName(), toCurrency.getValue());
-		update(toCurrency.getId(), fromCurrency.getName(), fromCurrency.getValue());
+		return count;
 	}
 
 	public static RowData cursorToCurrency(Cursor cursor) {

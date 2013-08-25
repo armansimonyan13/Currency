@@ -24,6 +24,8 @@ public class ConverterActivity extends Activity {
 
 		setContentView(R.layout.activity_converter);
 
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+
 		double toValue = getIntent().getDoubleExtra(TO_VALUE, 0.0);
 		coefficient = toValue;
 		EditText toCount = (EditText) findViewById(R.id.to_value);

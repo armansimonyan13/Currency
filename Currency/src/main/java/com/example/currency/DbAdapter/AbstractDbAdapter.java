@@ -5,7 +5,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class AbstractDbAdapter {
+public abstract class AbstractDbAdapter {
 	protected DatabaseHelper databaseHelper;
 	protected SQLiteDatabase database;
 

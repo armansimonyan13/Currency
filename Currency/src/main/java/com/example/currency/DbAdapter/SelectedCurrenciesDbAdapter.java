@@ -80,6 +80,8 @@ public class SelectedCurrenciesDbAdapter extends AbstractDbAdapter {
 			cursor.moveToNext();
 		}
 
+		cursor.close();
+
 		deleteAll();
 
 		for (RowData rowData : rowDataList) {
@@ -105,6 +107,8 @@ public class SelectedCurrenciesDbAdapter extends AbstractDbAdapter {
 			cursor.moveToNext();
 		}
 
+		cursor.close();
+
 		deleteAll();
 
 		for (RowData rowData : rowDataList) {
@@ -126,11 +130,19 @@ public class SelectedCurrenciesDbAdapter extends AbstractDbAdapter {
 		return false;
 	}
 
+	public boolean isOpen() {
+		return database.isOpen();
+	}
+
 	public int getCount() {
 		Cursor cursor = database.rawQuery(QUERY_COUNT, null);
 		cursor.moveToFirst();
 
-		return cursor.getInt(0);
+		int count = cursor.getInt(0);
+
+		cursor.close();
+
+		return count;
 	}
 
 	public void replace(long from, long to) {
@@ -152,6 +164,8 @@ public class SelectedCurrenciesDbAdapter extends AbstractDbAdapter {
 			cursor.moveToNext();
 		}
 
+		cursor.close();
+
 		rowDataList.add((int) to, fromRowData);
 
 		deleteAll();
@@ -166,7 +180,11 @@ public class SelectedCurrenciesDbAdapter extends AbstractDbAdapter {
 				COLUMN_NAME + " = '" + name + "'",
 				null, null, null, null);
 
-		if (cursor.getCount() == 0) {
+		int count = cursor.getCount();
+
+		cursor.close();
+
+		if (count == 0) {
 			return false;
 		}
 

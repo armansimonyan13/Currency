@@ -2,7 +2,6 @@ package com.example.currency;
 
 import android.app.ListActivity;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteException;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -11,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
+
 import com.example.currency.CursorAdapter.SelectedCurrenciesCursorAdapter;
 import com.example.currency.DbAdapter.AvailableCurrenciesDbAdapter;
 import com.example.currency.DbAdapter.SelectedCurrenciesDbAdapter;
@@ -62,18 +62,17 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 				@Override
 				public void remove(int which) {
 					selectedCurrenciesDbAdapter.delete(which);
+
+					((SelectedCurrenciesCursorAdapter) getListAdapter())
+							.changeCursor(selectedCurrenciesDbAdapter.fetchAllJoined());
 				}
 			};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_latest_rates_list);
-
-//	    if (savedInstanceState == null) {
-//		    updateRates();
-//	    }
-
 
 	    dslv = (DragSortListView) getListView();
 
@@ -91,8 +90,27 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 	    selectedCurrenciesDbAdapter = new SelectedCurrenciesDbAdapter(this);
 	    availableCurrenciesDbAdapter = new AvailableCurrenciesDbAdapter(this);
 
-	    selectedCurrenciesDbAdapter.open();
-	    availableCurrenciesDbAdapter.open();
+	    try {
+		    selectedCurrenciesDbAdapter.open();
+		    availableCurrenciesDbAdapter.open();
+	    } catch (SQLiteException e) {
+		    e.printStackTrace();
+		    finish();
+	    }
+
+		if (selectedCurrenciesDbAdapter.isEmpty()) {
+			for (String currencyName : getDefaultCurrencies()) {
+				selectedCurrenciesDbAdapter.insert(currencyName);
+			}
+		}
+
+	    selectedCurrenciesCursorAdapter = new SelectedCurrenciesCursorAdapter(
+			    SelectedCurrenciesListActivity.this,
+			    selectedCurrenciesDbAdapter.fetchAllJoined(), 0);
+
+	    setListAdapter(selectedCurrenciesCursorAdapter);
+
+	    updateRates();
     }
 
 	@Override
@@ -100,33 +118,23 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 		super.onResume();
 
 		try {
-
-			if (selectedCurrenciesDbAdapter.isEmpty()) {
-				for (String currencyName : getResources().getStringArray(R.array.initial_currencies)) {
-
-					selectedCurrenciesDbAdapter.insert(currencyName);
-				}
-			}
-
-			selectedCurrenciesCursorAdapter = new SelectedCurrenciesCursorAdapter(
-					SelectedCurrenciesListActivity.this,
-					selectedCurrenciesDbAdapter.fetchAllJoined(), 0);
-
-			setListAdapter(selectedCurrenciesCursorAdapter);
-
-			updateRates();
+			selectedCurrenciesDbAdapter.open();
+			availableCurrenciesDbAdapter.open();
 		} catch (SQLiteException e) {
 			e.printStackTrace();
 			finish();
 		}
+
+		((SelectedCurrenciesCursorAdapter) getListAdapter())
+				.changeCursor(selectedCurrenciesDbAdapter.fetchAllJoined());
 	}
 
 	@Override
-	protected void onDestroy() {
+	protected void onPause() {
 		selectedCurrenciesDbAdapter.close();
 		availableCurrenciesDbAdapter.close();
 
-		super.onDestroy();
+		super.onPause();
 	}
 
 	@Override
@@ -144,17 +152,19 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		Intent intent = null;
+		Intent intent;
+
 		switch (item.getItemId()) {
 			case R.id.action_settings:
 				intent = new Intent(SelectedCurrenciesListActivity.this, AvailableCurrenciesActivity.class);
-				startActivityForResult(intent, 13);
+				startActivity(intent);
 				return true;
 			case R.id.action_about:
 				intent = new Intent(SelectedCurrenciesListActivity.this, AboutActivity.class);
 				startActivity(intent);
 				return true;
 		}
+
 		return super.onOptionsItemSelected(item);
 	}
 
@@ -184,7 +194,6 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 		new AsyncTask<Void, Void, Void>() {
 			@Override
 			protected Void doInBackground(Void... voids) {
-				Latest latest = null;
 				HttpURLConnection urlConnection = null;
 
 				try {
@@ -192,7 +201,7 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 							+ Constants.API_ID_KEY + "=" + Constants.API_ID_VALUE);
 					urlConnection = (HttpURLConnection) url.openConnection();
 					LatestReader latestReader = new LatestReader(urlConnection.getInputStream());
-					latest = latestReader.read();
+					Latest latest = latestReader.read();
 
 					List<Pair<String, Double>> allRates = latest.getRates();
 					availableCurrenciesDbAdapter.deleteAll();
@@ -202,7 +211,9 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 				} catch (Exception e) {
 					e.printStackTrace();
 				} finally {
-					urlConnection.disconnect();
+					if (urlConnection != null) {
+						urlConnection.disconnect();
+					}
 				}
 
 				return null;
@@ -210,22 +221,14 @@ public class SelectedCurrenciesListActivity extends ListActivity implements Pull
 
 			@Override
 			protected void onPostExecute(Void voids) {
-				Cursor cursor = selectedCurrenciesDbAdapter.fetchAllJoined();
-				((SelectedCurrenciesCursorAdapter) getListAdapter()).changeCursor(cursor);
+				if (selectedCurrenciesDbAdapter.isOpen()) {
+					((SelectedCurrenciesCursorAdapter) getListAdapter())
+							.changeCursor(selectedCurrenciesDbAdapter.fetchAllJoined());
+				}
 
 //				pullToRefreshAttacher.setRefreshComplete();
 			}
 		}.execute();
-	}
-
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (resultCode == RESULT_OK) {
-			if (requestCode == 13) {
-				updateRates();
-			}
-		}
-		super.onActivityResult(requestCode, resultCode, data);
 	}
 
 	public DragSortController buildController(DragSortListView dslv) {

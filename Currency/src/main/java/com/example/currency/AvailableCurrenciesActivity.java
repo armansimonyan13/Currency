@@ -2,6 +2,7 @@ package com.example.currency;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
 import com.example.currency.CursorAdapter.AvailableCurrenciesCursorAdapter;
 import com.example.currency.DbAdapter.AvailableCurrenciesDbAdapter;
@@ -18,39 +19,32 @@ public class AvailableCurrenciesActivity extends ListActivity {
 
 		setContentView(R.layout.activity_available_currencies);
 
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+
 		availableCurrenciesDbAdapter = new AvailableCurrenciesDbAdapter(this);
 		selectedCurrenciesDbAdapter = new SelectedCurrenciesDbAdapter(this);
-
-		availableCurrenciesDbAdapter.open();
-		selectedCurrenciesDbAdapter.open();
-
-		setListAdapter(new AvailableCurrenciesCursorAdapter(
-				this, availableCurrenciesDbAdapter, selectedCurrenciesDbAdapter));
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
+
+		try {
+			selectedCurrenciesDbAdapter.open();
+			availableCurrenciesDbAdapter.open();
+		} catch (SQLiteException e) {
+			e.printStackTrace();
+			finish();
+		}
+		setListAdapter(new AvailableCurrenciesCursorAdapter(
+				this, availableCurrenciesDbAdapter, selectedCurrenciesDbAdapter));
 	}
 
 	@Override
 	protected void onPause() {
-		super.onPause();
-	}
-
-	@Override
-	protected void onDestroy() {
-
 		availableCurrenciesDbAdapter.close();
 		selectedCurrenciesDbAdapter.close();
 
-		super.onDestroy();
-	}
-
-	@Override
-	public void onBackPressed() {
-		Intent intent = new Intent();
-		setResult(RESULT_OK, intent);
-		finish();
+		super.onPause();
 	}
 }
